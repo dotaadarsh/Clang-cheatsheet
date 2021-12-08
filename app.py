@@ -3,7 +3,7 @@ from streamlit_player import st_player
 
 # Custom imports 
 from multipage import MultiPage
-from pages import cheat_sheet, keywords
+from pages import cheat_sheet, keywords, pointers
 st.set_page_config(layout="wide")
     
 # Create an instance of the app 
@@ -14,6 +14,7 @@ st.title("ZERONITE")
 # Add all your application here
 app.add_page("CHEAT SHEET", cheat_sheet.app)
 app.add_page("KEYWORDS", keywords.app)
+app.add_page("POINTERS", pointers.app)
 
 
 # The main app
