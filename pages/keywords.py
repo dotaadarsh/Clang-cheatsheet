@@ -1,9 +1,8 @@
-# Load important libraries 
+# Load libraries 
 import pandas as pd
 import streamlit as st 
 from streamlit_player import st_player
 import os
-
 
 def app():
 
@@ -16,7 +15,6 @@ def app():
   
   with col1: 
     a = st.button('auto')
-
     b = st.button('break & continue')
     if (b == True):
       st.caption("Syntax for break: ")
