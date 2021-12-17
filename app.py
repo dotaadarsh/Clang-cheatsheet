@@ -7,11 +7,11 @@ from pages import cheat_sheet, keywords, pointers
 
 st.set_page_config(
      page_title="ZERONITE",
-     page_icon="🧊",
+     page_icon="https://zer02infinity.com/assets/images/logo.gif",
      layout="wide",
      initial_sidebar_state="expanded",
  )
-   
+
 # Create an instance of the app 
 app = MultiPage()
 st.image("https://zer02infinity.com/assets/images/logo.gif")
