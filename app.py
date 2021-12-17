@@ -3,7 +3,7 @@ from streamlit_player import st_player
 
 # Custom imports 
 from multipage import MultiPage
-from pages import cheat_sheet, keywords, pointers, arrays, data_structures
+from pages import cheat_sheet, keywords, pointers, arrays, data_structures, problems
 
 st.set_page_config(
      page_title="ZERONITE",
@@ -23,7 +23,7 @@ app.add_page("KEYWORDS", keywords.app)
 app.add_page("ARRAYS", arrays.app)
 app.add_page("POINTERS", pointers.app)
 app.add_page("DATA STRUCTURES", data_structures.app)
-
+app.add_page("PROBLEMS", problems.app)
 
 # The main app
 app.run()  
