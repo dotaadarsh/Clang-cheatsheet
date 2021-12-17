@@ -3,7 +3,7 @@ from streamlit_player import st_player
 
 # Custom imports 
 from multipage import MultiPage
-from pages import cheat_sheet, keywords, pointers, arrays
+from pages import cheat_sheet, keywords, pointers, arrays, data_structures
 
 st.set_page_config(
      page_title="ZERONITE",
