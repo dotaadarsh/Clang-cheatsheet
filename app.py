@@ -22,6 +22,7 @@ app.add_page("CHEAT SHEET", cheat_sheet.app)
 app.add_page("KEYWORDS", keywords.app)
 app.add_page("ARRAYS", arrays.app)
 app.add_page("POINTERS", pointers.app)
+app.add_page("DATA STRUCTURES", data_structures.app)
 
 
 # The main app
