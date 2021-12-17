@@ -12,7 +12,7 @@ def app():
 
   st.header("C CHEATSHEET", anchor=None)
   st.caption("REVISE ON THE GO")
-  st_player("https://open.spotify.com/show/0lUXb7lZJF4mFW0RE6w2Pc?si=7c5bafa291564167")
+  st_player("https://youtu.be/U3aXWizDbQ4")
   col1, col2, col3 = st.columns([1,1,1])
   with col1:
     with st.expander("KEYWORDS (32)", expanded = True):
