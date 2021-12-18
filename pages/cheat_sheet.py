@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_player import st_player
+import pandas as pd
 
 def app():
   st.sidebar.title("BOOKS")
@@ -53,7 +54,23 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
-      
+  
+    with st.expander("LIBRARY FUNCTIONS (11)", expanded = True):
+      st.write("""
+                - <assert.h> - Program assertion functions
+                - <ctype.h>	- Character type functions
+                - <locale.h>	- Localization functions
+                - <math.h>	- Mathematics functions
+                - <setjmp.h>	- Jump functions
+                - <signal.h>	- Signal handling functions
+                - <stdarg.h>	- Variable arguments handling functions
+                - <stdio.h>	- Standard Input/Output functions
+                - <stdlib.h> - Standard Utility functions
+                - <string.h> - String handling functions
+                - <time.h> - Date time functions
+                <br/><br/>
+                """,
+             unsafe_allow_html=True)
   with col2:
     with st.expander("ESCAPE SEQUENCES (15) - starting with backslash \ ",
                  expanded=True):
@@ -147,3 +164,34 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
+    with st.expander("OPERATORS", expanded=True):
+      st.text("Relational Operators")
+      st.write("""
+                - Equals "=="
+                - Not equals "!="
+                - Not "!"
+                - Greater than ">"
+                - Less than "<"
+                - Greater than or equal ">="
+                - Less than or equal "<="
+                <br/><br/>
+                """,
+             unsafe_allow_html=True)
+
+             
+  st.code('for i in range(8): foo()')
+  code = '''#include <stdio.h>
+  int main() {
+   /* my first program in C */
+   printf("Hello, World! \n");
+   
+   return 0;
+   }'''
+
+  st.code(code, language='c')
+  st.text("COMMENTS")
+  st.caption("Comments are used to indicate something to the person reading the code. Comments are treated like a blank bythe compiler and do not change anything in the code's actual meaning. There are two syntaxes used for commentsin C, the original /* */ and the slightly newer //")
+  
+  df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ5B9E5p6MbKot2HBwAwkGGr_YxVJWgUdTgUVvamEtI6Vo2IdsqcjUq-MCdVoJD7dYpawtaHxgfSNO/pub?output=csv") 
+  #Method 1
+  st.dataframe(df)
