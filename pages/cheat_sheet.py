@@ -60,6 +60,9 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
+    with st.expander("INTEGER TYYPES AND CONSTANTS", expanded = True):
+      df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ5B9E5p6MbKot2HBwAwkGGr_YxVJWgUdTgUVvamEtI6Vo2IdsqcjUq-MCdVoJD7dYpawtaHxgfSNO/pub?output=csv") 
+      st.dataframe(df)
   with col2:
     with st.expander("ESCAPE SEQUENCES (15) - starting with backslash \ ",
                  expanded=True):
@@ -166,10 +169,29 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
+      st.text("Conditional/Ternary Operator")
+      st.write("""
+                - a = b ? c : d;
+                <br/><br/>
+                """,
+             unsafe_allow_html=True)
+      st.caption("exp1 ? exp2 : exp3 ? exp4 : exp5")
+      st.info("As the association is from right to left, the above expression is evaluated as\nexp1 ? exp2 :( exp3 ? exp4 : exp5 )")
+
+
+      st.text("Bitwise Operator")
+      st.write("""
+      - & - bitwise AND
+      - | - bitwise inclusive OR
+      - ^ - bitwise exclusive OR (XOR)
+      - ~ - bitwise not (one's complement)
+      - << - logical left shift
+      - << - logical right shift
+      <br/><br/>
+                """,
+             unsafe_allow_html=True)
 
   st.text("COMMENTS")
   st.caption("Comments are used to indicate something to the person reading the code. Comments are treated like a blank bythe compiler and do not change anything in the code's actual meaning. There are two syntaxes used for commentsin C, the original /* */ and the slightly newer //")
   
-  df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ5B9E5p6MbKot2HBwAwkGGr_YxVJWgUdTgUVvamEtI6Vo2IdsqcjUq-MCdVoJD7dYpawtaHxgfSNO/pub?output=csv") 
-  #Method 1
-  st.dataframe(df)
+
