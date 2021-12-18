@@ -3,13 +3,11 @@ from streamlit_player import st_player
 import pandas as pd
 
 def app():
-  st.sidebar.title("BOOKS")
+  st.sidebar.title("RESOURCES")
   st.sidebar.info(
-            "[C](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c)"
-            "\n [C++](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c-1)")
-
-  st.sidebar.info(
-            "[Free programming books](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md)")
+            "- [The Basics of C Programming - Marshall Brain](https://www.phys.uconn.edu/~rozman/Courses/P2200_13F/downloads/TheBasicsofCProgramming-draft-20131030.pdf)"
+            "\n- [C Programming - Wikibooks](https://en.wikibooks.org/wiki/C_Programming)"
+            "\n- [Beej’s Guide to C ProgrammingBrian “Beej Jorgensen” Hal](https://beej.us/guide/bgc/pdf/bgc_a4_bw_2.pdf)")
 
   st.header("C CHEATSHEET", anchor=None)
   st.caption("REVISE ON THE GO")
@@ -19,37 +17,28 @@ def app():
     with st.expander("KEYWORDS (32)", expanded = True):
       st.write("""
                 - auto
-                - break 
-                - case
+                - break - continue
                 - char
                 - const
-                - continue
-                - default
-                - do
-                - double
-                - else
+                - do...while
+                - double - float
                 - enum
                 - extern
-                - float
                 - for
                 - goto
-                - if
+                - if - else
                 - int
-                - long
                 - register
                 - return
-                - short
-                - signed
+                - short - long - signed - unsigned
                 - sizeof
                 - static
                 - struct
-                - switch
+                - switch - case - default
                 - typedef
                 - union
-                - unsigned
                 - void
                 - volatile
-                - while
                 - double
                 <br/><br/>
                 """,
