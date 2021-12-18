@@ -167,17 +167,6 @@ def app():
                 """,
              unsafe_allow_html=True)
 
-             
-  st.code('for i in range(8): foo()')
-  code = '''#include <stdio.h>
-  int main() {
-   /* my first program in C */
-   printf("Hello, World! \n");
-   
-   return 0;
-   }'''
-
-  st.code(code, language='c')
   st.text("COMMENTS")
   st.caption("Comments are used to indicate something to the person reading the code. Comments are treated like a blank bythe compiler and do not change anything in the code's actual meaning. There are two syntaxes used for commentsin C, the original /* */ and the slightly newer //")
   
