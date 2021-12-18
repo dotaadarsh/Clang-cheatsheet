@@ -147,15 +147,3 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
-
-             
-  st.code('for i in range(8): foo()')
-  code = '''#include <stdio.h>
-  int main() {
-   /* my first program in C */
-   printf("Hello, World! \n");
-   
-   return 0;
-   }'''
-
-  st.code(code, language='c')
