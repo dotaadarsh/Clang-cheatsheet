@@ -10,17 +10,20 @@ def app():
 
   st.image("https://i1.faceprep.in/fp/articles/img/29757_1580126593.png", caption="Preferred Approach")
 
-  option = st.selectbox(
-     'Choose the topics',
-     ('Basics', 'Loops', 'number Crunching', 'Arrays', 'Pointers', 'Recursion','File and Streams', 'Misc-1', 'Misc-2'))
-     
+  option = st.sidebar.radio(
+            'Topics', ('Basics', 'Loops', 'number Crunching', 'Arrays', 'Pointers', 'Recursion','File and Streams', 'Misc-1', 'Misc-2')
+        ) 
   st.write('You selected:', option)
   
   if option == 'Basics':
     st.write("BASICS")
-    col1, col2 = st.columns([0.5,2])
-    with col1:
-      a = st.button('auto')
 
-    with col2: 
-      st.write("here are the basic example")
+    
+    with st.expander("See explanation"):
+     st.write("""
+         The chart above shows some numbers I picked for you.
+         I rolled actual dice for these, so they're *guaranteed* to
+         be random.
+     """)
+     st.markdown('```Sample testcases```\n > fsfsdf')
+     st.image("https://static.streamlit.io/examples/dice.jpg")
