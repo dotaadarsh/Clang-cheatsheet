@@ -10,14 +10,14 @@ def app():
 
   st.image("https://i1.faceprep.in/fp/articles/img/29757_1580126593.png", caption="Preferred Approach")
 
-  option = st.selectbox(
-     'Choose the topics',
-     ('Basics', 'Loops', 'number Crunching', 'Arrays', 'Pointers', 'Recursion','File and Streams', 'Misc-1', 'Misc-2'))
-     
+  option = st.sidebar.radio(
+            'Topics', ('Basics', 'Loops', 'number Crunching', 'Arrays', 'Pointers', 'Recursion','File and Streams', 'Misc-1', 'Misc-2')
+        ) 
   st.write('You selected:', option)
   
   if option == 'Basics':
     st.write("BASICS")
+    st.markdown('```Sample testcases```\n > fsfsdf')
     col1, col2 = st.columns([0.5,2])
     with col1:
       a = st.button('auto')
