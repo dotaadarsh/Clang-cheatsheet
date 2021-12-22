@@ -17,10 +17,13 @@ def app():
   
   if option == 'Basics':
     st.write("BASICS")
-    st.markdown('```Sample testcases```\n > fsfsdf')
-    col1, col2 = st.columns([0.5,2])
-    with col1:
-      a = st.button('auto')
 
-    with col2: 
-      st.write("here are the basic example")
+    
+    with st.expander("See explanation"):
+     st.write("""
+         The chart above shows some numbers I picked for you.
+         I rolled actual dice for these, so they're *guaranteed* to
+         be random.
+     """)
+     st.markdown('```Sample testcases```\n > fsfsdf')
+     st.image("https://static.streamlit.io/examples/dice.jpg")
