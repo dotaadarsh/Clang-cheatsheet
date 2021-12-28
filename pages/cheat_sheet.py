@@ -16,14 +16,13 @@ def app():
   with col1:
     with st.expander("KEYWORDS (32)", expanded = True):
       st.write("""
-                - auto
+                - auto - extern
                 - break - continue
                 - char
                 - const
                 - do...while
                 - double - float
                 - enum
-                - extern
                 - for
                 - goto
                 - if - else
@@ -39,7 +38,6 @@ def app():
                 - union
                 - void
                 - volatile
-                - double
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
@@ -194,4 +192,3 @@ def app():
   st.text("COMMENTS")
   st.caption("Comments are used to indicate something to the person reading the code. Comments are treated like a blank bythe compiler and do not change anything in the code's actual meaning. There are two syntaxes used for commentsin C, the original /* */ and the slightly newer //")
   
-
