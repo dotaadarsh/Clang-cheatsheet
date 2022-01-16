@@ -1,7 +1,6 @@
 # Load libraries 
 import streamlit as st 
 from streamlit_player import st_player
-from streamlit_embedcode import github_gist
 
 def app():
 
@@ -61,9 +60,6 @@ def app():
           printf("%d", number);
           return 0;
           }'''
-      st.code(code, language='c')
-      t ="https://gist.github.com/madmax-ak/3ee5f8951f9cdc3c9293fdd2582b6030"
-      github_gist(t, 300, 800, 710)
 
     elif(b==True):
       st.write("break - continue")
