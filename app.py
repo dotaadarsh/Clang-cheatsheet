@@ -6,7 +6,7 @@ from multipage import MultiPage
 from pages import cheat_sheet, keywords, pointers, arrays, data_structures, problems
 
 st.set_page_config(
-     page_title="ZERONITE",
+     page_title="ZERONITE | C Cheatsheet",
      page_icon="https://zer02infinity.com/assets/images/logo.gif",
      layout="wide",
      initial_sidebar_state="expanded",
@@ -15,7 +15,7 @@ st.set_page_config(
 # Create an instance of the app 
 app = MultiPage()
 st.image("https://zer02infinity.com/assets/images/logo.gif")
-st.title("ZERONITE")
+st.title("ZERONITE | C Lang Cheatsheet")
 
 # Add all your application here
 app.add_page("CHEAT SHEET", cheat_sheet.app)
