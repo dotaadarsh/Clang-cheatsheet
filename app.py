@@ -12,10 +12,11 @@ st.set_page_config(
      initial_sidebar_state="expanded",
  )
 
+st.sidebar.text("> Pre-Alpha version 1.1.1")
+
 # Create an instance of the app 
 app = MultiPage()
-st.image("https://zer02infinity.com/assets/images/logo.gif")
-st.title("ZERONITE | C Lang Cheatsheet")
+st.image("/workspace/test-streamlit/asserts/logo.gif")
 
 # Add all your application here
 app.add_page("CHEAT SHEET", cheat_sheet.app)

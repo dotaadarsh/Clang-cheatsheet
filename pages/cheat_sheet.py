@@ -4,13 +4,22 @@ import streamlit.components.v1 as components
 import pandas as pd
 
 def app():
+
   st.sidebar.title("Resources")
   with st.sidebar:
-    st.download_button(label="Beej’s Guide to C Programming", data="https://beej.us/guide/bgc/pdf/bgc_a4_bw_2.pdf", file_name=None)
-    st.download_button(label="The Basics of C Programming", data="https://www.phys.uconn.edu/~rozman/Courses/P2200_13F/downloads/TheBasicsofCProgramming-draft-20131030.pdf", file_name=None)
+     st.download_button(label="Beej’s Guide to C Programming", data="https://beej.us/guide/bgc/pdf/bgc_a4_bw_2.pdf", file_name=None)
+     st.download_button(label="The Basics of C Programming", data="https://www.phys.uconn.edu/~rozman/Courses/P2200_13F/downloads/TheBasicsofCProgramming-draft-20131030.pdf", file_name=None)
+     st.markdown('> Join my discord community.')
+     components.html(
+    """<iframe src="https://discord.com/widget?id=818551736809422848&theme=dark" width="280" height="380" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>""",
+    height=400,)
 
   st.caption("Revise on the go")
   st_player("https://youtu.be/U3aXWizDbQ4")
+
+  with st.expander("Roadmap", expanded=True): 
+    st.image("/workspace/test-streamlit/asserts/TIMELINE.jpg")
+
   col1, col2, col3 = st.columns([1,1,1])
   with col1:
     with st.expander("Keywords", expanded = True):
@@ -40,20 +49,16 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
-  
-    with st.expander("Library functions", expanded = True):
-      st.write("""
-                - <assert.h> - Program assertion functions
-                - <ctype.h>	- Character type functions
-                - <locale.h>	- Localization functions
-                - <math.h>	- Mathematics functions
-                - <setjmp.h>	- Jump functions
-                - <signal.h>	- Signal handling functions
-                - <stdarg.h>	- Variable arguments handling functions
-                - <stdio.h>	- Standard Input/Output functions
-                - <stdlib.h> - Standard Utility functions
-                - <string.h> - String handling functions
-                - <time.h> - Date time functions
+
+    with st.expander("Constants - const keyword (or) #define preprocessor",
+                 expanded=True):
+                 st.write("""
+                - Decimal Constant - 10, 20, 450 etc.
+                - Real or Floating-point Constant	10.3, 20.2, 450.6 etc.
+                - Octal Constant	021, 033, 046 etc.
+                - Hexadecimal Constant	0x2a, 0x7b, 0xaa etc.
+                - Character Constant	'a', 'b', 'x' etc.
+                - String Constant	"c", "c program", "ZERONITE" etc.
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
@@ -116,7 +121,6 @@ def app():
                 """,
              unsafe_allow_html=True)
       st.caption("exp1 ? exp2 : exp3 ? exp4 : exp5")
-      st.info("As the association is from right to left, the above expression is evaluated as\nexp1 ? exp2 :( exp3 ? exp4 : exp5 )")
      
       st.text("Logical Operators")
       st.write("""
@@ -179,18 +183,6 @@ def app():
                 <br/><br/>
                 """,
              unsafe_allow_html=True)
-    with st.expander("Constants - const keyword (or) #define preprocessor",
-                 expanded=True):
-                 st.write("""
-                - Decimal Constant - 10, 20, 450 etc.
-                - Real or Floating-point Constant	10.3, 20.2, 450.6 etc.
-                - Octal Constant	021, 033, 046 etc.
-                - Hexadecimal Constant	0x2a, 0x7b, 0xaa etc.
-                - Character Constant	'a', 'b', 'x' etc.
-                - String Constant	"c", "c program", "ZERONITE" etc.
-                <br/><br/>
-                """,
-             unsafe_allow_html=True)
 
     with st.expander("Format specifier", expanded=True):
       st.write("""
@@ -212,6 +204,24 @@ def app():
     with st.expander("Integer types and Constants", expanded = True):
       df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ5B9E5p6MbKot2HBwAwkGGr_YxVJWgUdTgUVvamEtI6Vo2IdsqcjUq-MCdVoJD7dYpawtaHxgfSNO/pub?output=csv") 
       st.dataframe(df)
+
+  
+    with st.expander("Library functions", expanded = True):
+      st.write("""
+                - <assert.h> - Program assertion functions
+                - <ctype.h>	- Character type functions
+                - <locale.h>	- Localization functions
+                - <math.h>	- Mathematics functions
+                - <setjmp.h>	- Jump functions
+                - <signal.h>	- Signal handling functions
+                - <stdarg.h>	- Variable arguments handling functions
+                - <stdio.h>	- Standard Input/Output functions
+                - <stdlib.h> - Standard Utility functions
+                - <string.h> - String handling functions
+                - <time.h> - Date time functions
+                <br/><br/>
+                """,
+             unsafe_allow_html=True)
       
   st.subheader("Order of Precedence")
   df = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ5B9E5p6MbKot2HBwAwkGGr_YxVJWgUdTgUVvamEtI6Vo2IdsqcjUq-MCdVoJD7dYpawtaHxgfSNO/pub?gid=600762557&single=true&output=csv") 
@@ -278,12 +288,11 @@ data_type variable_name = arr[index]''')
 };      //Notice the semicolon  ''')
 
   st.subheader("Dynamic Memory Allocation")
-  st.write("""
-**- malloc() function** - Stands for 'Memory allocation' and reserves a block of memory with the given amount of bytes. 
-\n **- calloc() function** - Stands for “contiguous allocation” method in C is used to dynamically allocate the specified number of blocks of memory of the specified type.
-\n **- realloc() function** - If the allocated memory is insufficient, then we can change the size of previously allocated memory using this function for efficiency purposes.
-\n **- free() function** - “free” method in C is used to dynamically de-allocate the memory. 
-  """)
+  st.markdown('>  **malloc() function** - Stands for Memory allocation and reserves a block of memory with the given amount of bytes.')
+  st.markdown('>  **calloc() function** - Stands for “contiguous allocation” method in C is used to dynamically allocate the specified number of blocks of memory of the specified type.')
+  st.markdown('>  **realloc() function** - If the allocated memory is insufficient, then we can change the size of previously allocated memory using this function for efficiency purposes.')
+  st.markdown('>  **free() function** - “free” method in C is used to dynamically de-allocate the memory. ')
+
   st.subheader("File handling")
   st.write("Creating file pointer")
   st.code('''FILE *file''')
@@ -298,8 +307,9 @@ data_type variable_name = arr[index]''')
   st.write("Closing a File")
   st.code('''fclose(file);''')
 
-  with st.sidebar:
-    st.markdown('> Join my discord community.')
-    components.html(
-    """<iframe src="https://discord.com/widget?id=818551736809422848&theme=dark" width="280" height="380" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>""",
-    height=400,)
+  st.subheader("Summary")
+  st.write("- ‘C’ was developed by Dennis Ritchie in 1972.\n- It is a robust language.\n- It is a low programming level language close to machine language \n- It is widely used in the software development field. \n- It is a procedure and structure oriented language. \n- It has the full support of various operating systems and hardware platforms. \n- Many compilers are available for executing programs written in ‘C’. \n- A compiler compiles the source file and generates an object file.\n- A linker links all the object files together and creates one executable file.")
+ 
+  st.markdown('***')
+  st.markdown(
+        "Thanks for visiting. I'd love feedback on this, so if you want to reach out you can find me on [twitter] (https://twitter.com/madmax_ak) or in Discord MADMAX#4441")
