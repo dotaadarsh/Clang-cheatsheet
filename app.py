@@ -16,7 +16,7 @@ st.sidebar.text("> Pre-Alpha version 1.1.1")
 
 # Create an instance of the app 
 app = MultiPage()
-st.image("/workspace/test-streamlit/asserts/logo.gif")
+st.image("asserts/logo.gif")
 
 # Add all your application here
 app.add_page("CHEAT SHEET", cheat_sheet.app)
