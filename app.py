@@ -14,6 +14,13 @@ st.set_page_config(
 
 st.sidebar.text("> Pre-Alpha version 1.1.1")
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 # Create an instance of the app 
 app = MultiPage()
 st.image("/workspace/test-streamlit/asserts/logo.gif")
