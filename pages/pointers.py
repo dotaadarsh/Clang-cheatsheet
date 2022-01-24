@@ -3,6 +3,8 @@ import streamlit as st
 from streamlit_player import st_player
 
 def app():
+  st.image("https://media3.giphy.com/media/LzCREPXRTqtdC/giphy.gif?cid=ecf05e47oevr6k9e9k8p7whu8waidozqf18ypm1pur0a9n9a&rid=giphy.gif&ct=g")
+  """
 
   st.header('POINTERS')
 
@@ -101,3 +103,4 @@ return 0;
 
   else:
      st.write("Choose the Topics in the sidebar")
+     """
