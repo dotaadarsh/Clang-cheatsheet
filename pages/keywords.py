@@ -5,7 +5,7 @@ from streamlit_player import st_player
 def app():
 	st.image("https://media.makeameme.org/created/nothing-to-see-5be636.jpg")
 
-  """st.header('KEYWORDS')
+  st.header('KEYWORDS')
   st.caption("Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Keywords are part of the syntax and they cannot be used as an identifier.")
 
   st.info('Click on the keywords to explore about it')
@@ -186,6 +186,4 @@ int main() {
       st.write('A keyword is a reserved word. You cannot use it as a variable name, constant name, etc. There are only 32 reserved words (keywords) in the C language.')
 
       st.info("Keywords are the words whose meaning has already been explained to the C compiler and their meanings cannot be changed. Hence keywords are also called ‘Reserved words’. \n- Keywords can be used only for their intended purpose.\n- Keywords serve as basic building blocks for program statements.\n- Keywords can’t be used as programmer defined identifier.\n- The keywords can’t be used as names for variables.\n- All keywords must be written in lowercase.\n- 32 keywords available in C.")
-      
-      """
     
