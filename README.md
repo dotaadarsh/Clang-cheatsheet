@@ -1,7 +1,7 @@
 # C Language cheatsheet
 ## Revise on the go 
 
-But built with python tho...
+Built with python tho...
 
 ## Tech
 
