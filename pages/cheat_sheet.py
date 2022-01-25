@@ -307,10 +307,15 @@ data_type variable_name = arr[index]''')
   st.write("Closing a File")
   st.code('''fclose(file);''')
 
-  st.subheader("Summary")
-  st.write("- ‘C’ was developed by Dennis Ritchie in 1972.\n- It is a robust language.\n- It is a low programming level language close to machine language \n- It is widely used in the software development field. \n- It is a procedure and structure oriented language. \n- It has the full support of various operating systems and hardware platforms. \n- Many compilers are available for executing programs written in ‘C’. \n- A compiler compiles the source file and generates an object file.\n- A linker links all the object files together and creates one executable file.")
- 
+
+  col1, col2 = st.columns([1.5,1])
+  with col1:
+    st.subheader("Summary")
+    st.write("- ‘C’ was developed by Dennis Ritchie in 1972.\n- It is a robust language.\n- It is a low programming level language close to machine language \n- It is widely used in the software development field. \n- It is a procedure and structure oriented language. \n- It has the full support of various operating systems and hardware platforms. \n- Many compilers are available for executing programs written in ‘C’. \n- A compiler compiles the source file and generates an object file.\n- A linker links all the object files together and creates one executable file.")
+  with col2: 
+    st.image("https://c.tenor.com/_DOBjnGspYAAAAAM/code-coding.gif", width=350)
   st.markdown('***')
   st.markdown(
         "Thanks for visiting. I'd love feedback on this, so if you want to reach out you can find me on [Twitter] (https://twitter.com/madmax_ak), [GitHub] (https://github.com/madmax-ak), [LinkedIn] (https://www.linkedin.com/in/aadarsh-k/) or in Discord - MADMAX#4441")
 
+        

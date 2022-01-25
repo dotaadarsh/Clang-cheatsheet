@@ -1,9 +1,14 @@
 # Load libraries 
 import streamlit as st 
 from streamlit_player import st_player
+import streamlit.components.v1 as components
+
 
 def app():
 
+  components.html(
+    """<div style="width:100%;height:0;padding-bottom:65%;position:relative;"><iframe src="https://giphy.com/embed/hvN3SkNMRSB7mZa8JL" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/working-busy-under-construction-hvN3SkNMRSB7mZa8JL">via GIPHY</a></p>""",
+height=600,)
   st.header('KEYWORDS')
   st.caption("Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Keywords are part of the syntax and they cannot be used as an identifier.")
   st.info('Click on the keywords to explore about it')
