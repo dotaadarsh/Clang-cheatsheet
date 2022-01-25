@@ -3,7 +3,7 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - command: python app.py
+  - command: streamlit run app.py
 vscode:
   extensions:
     - ms-python.python

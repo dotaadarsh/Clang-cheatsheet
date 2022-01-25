@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit_player import st_player
+import streamlit.components.v1 as components
+
 
 # Custom imports 
 from multipage import MultiPage
@@ -13,7 +15,14 @@ st.set_page_config(
  )
 
 st.sidebar.text("> Pre-Alpha version 1.1.1")
-
+with st.sidebar:
+     components.html(
+    """<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/madmax-ak/Clang-cheatsheet" data-color-scheme="no-preference: dark_high_contrast; light: dark_high_contrast; dark: dark_high_contrast;" data-icon="octicon-star" aria-label="Star madmax-ak/Clang-cheatsheet on GitHub">Star</a>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>""",
+    height=30,)
+    
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}

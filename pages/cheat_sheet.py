@@ -313,3 +313,4 @@ data_type variable_name = arr[index]''')
   st.markdown('***')
   st.markdown(
         "Thanks for visiting. I'd love feedback on this, so if you want to reach out you can find me on [Twitter] (https://twitter.com/madmax_ak), [GitHub] (https://github.com/madmax-ak), [LinkedIn] (https://www.linkedin.com/in/aadarsh-k/) or in Discord - MADMAX#4441")
+
