@@ -12,6 +12,7 @@ class MultiPage:
     def add_page(self, title, func) -> None: 
         """Class Method to Add pages to the project
 
+
         Args:
             title ([str]): The title of page which we are adding to the list of apps 
             
@@ -28,7 +29,7 @@ class MultiPage:
     def run(self):
         # Drodown to select the page to run  
         page = st.sidebar.selectbox(
-            'App Navigation', 
+            'App Navigation [Other pages are under dev]', 
             self.pages, 
             format_func=lambda page: page['title']
         )

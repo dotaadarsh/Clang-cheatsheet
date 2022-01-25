@@ -7,6 +7,7 @@ def app():
 
   st.sidebar.title("Resources")
   with st.sidebar:
+     st.download_button(label="The C Prog language by K & R", data="https://kremlin.cc/k&r.pdf", file_name="The C Prog language by K & R")
      st.download_button(label="Beej’s Guide to C Programming", data="https://beej.us/guide/bgc/pdf/bgc_a4_bw_2.pdf", file_name=None)
      st.download_button(label="The Basics of C Programming", data="https://www.phys.uconn.edu/~rozman/Courses/P2200_13F/downloads/TheBasicsofCProgramming-draft-20131030.pdf", file_name=None)
      st.markdown('> Join my discord community.')
