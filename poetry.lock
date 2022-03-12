@@ -342,7 +342,7 @@ python-versions = ">=3.7"
 [package.dependencies]
 appnope = {version = "*", markers = "platform_system == \"Darwin\""}
 debugpy = ">=1.0.0,<2.0"
-ipython = "<7.31.1"
+ipython = "7.31.1"
 jupyter-client = "<8.0"
 matplotlib-inline = ">=0.1.0,<0.2.0"
 tornado = ">=4.2,<7.0"
