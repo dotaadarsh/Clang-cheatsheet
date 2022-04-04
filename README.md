@@ -6,4 +6,6 @@ Built with python tho...
 ## Tech
 
 - [Streamlit](https://streamlit.io/)- Streamlit turns data scripts into shareable web apps in minutes.
-- [Gitpod](https://www.gitpod.io/)- - Gitpod streamlines developer workflows by providing prebuilt, collaborative developer environments in your browser - powered by VS Code.
+- [Gitpod](https://www.gitpod.io/) - Gitpod streamlines developer workflows by providing prebuilt, collaborative developer environments in your browser - powered by VS Code.
+
+![Homepage](https://github.com/dotaadarsh/Clang-cheatsheet/blob/main/asserts/Homepage.PNG "Hompepage")
