@@ -1,3 +1,4 @@
+#import libraries
 import streamlit as st
 from streamlit_player import st_player
 import streamlit.components.v1 as components
@@ -6,6 +7,7 @@ import pandas as pd
 def app():
 
   st.sidebar.title("Resources")
+
   with st.sidebar:
      st.download_button(label="The C Prog language by K & R", data="https://kremlin.cc/k&r.pdf", file_name="The C Prog language by K & R")
      st.download_button(label="Beej’s Guide to C Programming", data="https://beej.us/guide/bgc/pdf/bgc_a4_bw_2.pdf", file_name=None)
@@ -319,4 +321,3 @@ data_type variable_name = arr[index]''')
   st.markdown(
         "Thanks for visiting. I'd love feedback on this, so if you want to reach out you can find me on [Twitter] (https://twitter.com/madmax_ak), [GitHub] (https://github.com/madmax-ak), [LinkedIn] (https://www.linkedin.com/in/aadarsh-k/) or in Discord - MADMAX#4441")
 
-        

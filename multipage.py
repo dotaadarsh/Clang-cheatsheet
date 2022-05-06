@@ -12,7 +12,6 @@ class MultiPage:
     def add_page(self, title, func) -> None: 
         """Class Method to Add pages to the project
 
-
         Args:
             title ([str]): The title of page which we are adding to the list of apps 
             

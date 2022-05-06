@@ -2,9 +2,9 @@
 import streamlit as st 
 from streamlit_player import st_player
 
-
 def app():
-
+  
+  st.image("https://media1.giphy.com/media/H6bJ3gKixWjFHYscvY/giphy.gif?cid=6c09b952m4j0k0vrp9h9aq20jwgjik9sycvtrv77xtbsn2uj&rid=giphy.gif&ct=ts")
   st.header('EXAMPLES')
   st.caption("An array is defined as the collection of similar type of data items stored at contiguous memory locations. Arrays are the derived data type in C programming language which can store the primitive type of data such as int, char, double, float, etc. It also has the capability to store the collection of derived data types, such as pointers, structure, etc. The array is the simplest data structure where each data element can be randomly accessed by using its index number.")
 
